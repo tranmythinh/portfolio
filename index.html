@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Mỹ Thịnh | Editorial Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts: Playfair Display (Serif), Inter (Sans-serif), Caveat (Script) -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                        script: ['Caveat', 'cursive'],
+                    },
+                    colors: {
+                        black: {
+                            soft: '#1A1A1A', // Soft black for main text
+                        },
+                        gray: {
+                            accent: '#F3F4F6', // Accent BG for tags
+                            dark: '#333333', // Secondary text
+                            divider: '#E5E7EB', // Thin 1px dividers
+                        },
+                        gold: {
+                            muted: '#B89C72', // Muted Gold/Beige for accents
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Fade-in Animation on Scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Delay utilities for sequential animations */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Custom selection color */
+        ::selection {
+            background-color: #B89C72;
+            color: #ffffff;
+        }
+
+        /* Minimal Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffffff; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E5E7EB; 
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B89C72; 
+        }
+    </style>
+</head>
+<body class="font-sans text-black-soft bg-white antialiased selection:bg-gold-muted selection:text-white">
+
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-divider transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5 flex justify-between items-center">
+            <a href="#home" class="font-serif font-bold text-xl tracking-wide text-black-soft hover:text-gold-muted transition-colors">Trần Mỹ Thịnh</a>
+            <div class="hidden md:flex space-x-10 text-xs tracking-[0.15em] uppercase font-medium text-gray-dark">
+                <a href="#about" class="hover:text-gold-muted transition-colors">About</a>
+                <a href="#journey" class="hover:text-gold-muted transition-colors">Journey</a>
+                <a href="#cases" class="hover:text-gold-muted transition-colors">Cases</a>
+                <a href="#contact" class="hover:text-gold-muted transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="relative min-h-screen flex flex-col justify-center pt-28 pb-12 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center h-full">
+            
+            <!-- Text Column -->
+            <div class="lg:col-span-7 order-2 lg:order-1 text-center lg:text-left reveal">
+                <p class="text-xs md:text-sm font-medium tracking-[0.3em] text-gray-500 uppercase mb-6">
+                    Digital Marketing Specialist
+                </p>
+                <h1 class="font-serif text-5xl md:text-7xl lg:text-[5.5rem] font-bold text-black-soft leading-tight mb-8">
+                    TRẦN MỸ <br class="hidden lg:block" /> THỊNH
+                </h1>
+                
+                <p class="font-script text-3xl md:text-4xl text-gold-muted mb-10 max-w-2xl mx-auto lg:mx-0">
+                    "Turning ideas into meaningful connections and business growth."
+                </p>
+                
+                <div class="inline-block border border-gray-divider py-3 px-6 text-sm text-gray-dark font-medium mb-12">
+                    <span class="text-black-soft font-bold">9+ years</span> in Digital Marketing 
+                    <span class="mx-3 text-gray-300">|</span> 
+                    Real Estate · F&B · Hospitality
+                </div>
+            </div>
+
+            <!-- Image Column -->
+            <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end reveal delay-100">
+                <div class="relative w-72 h-96 md:w-[22rem] md:h-[30rem] lg:w-[26rem] lg:h-[34rem] rounded-xl p-2 border-4 border-white shadow-xl bg-white">
+                    <!-- =================== THAY ẢNH CHÂN DUNG CỦA BẠN Ở ĐÂY =================== -->
+                    <!-- Sửa đường link trong thuộc tính src="..." thành link ảnh của bạn -->
+                    <img src="ChatGPT Image 17_45_21 22 thg 9, 2026.png" onerror="this.src='thinh.jpg'" alt="Trần Mỹ Thịnh" class="w-full h-full object-cover rounded-lg">
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Bottom Banner / Footer of section -->
+        <div class="absolute bottom-10 left-0 right-0 w-full flex justify-center reveal delay-200 hidden md:flex">
+            <div class="flex items-center gap-6 text-[0.65rem] tracking-[0.2em] font-medium text-gray-400 uppercase">
+                <span>Strategy</span>
+                <span class="w-1 h-1 rounded-full bg-gold-muted"></span>
+                <span>Content</span>
+                <span class="w-1 h-1 rounded-full bg-gold-muted"></span>
+                <span>Performance</span>
+                <span class="w-1 h-1 rounded-full bg-gold-muted"></span>
+                <span>Growth</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 md:py-32 px-6 lg:px-12 border-t border-gray-divider">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+            
+            <!-- Left Column: About -->
+            <div class="lg:col-span-7 reveal">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-black-soft mb-8">About Me.</h2>
+                <div class="space-y-6 text-gray-dark font-light leading-relaxed text-lg md:text-xl">
+                    <p>
+                        Tôi có hơn <strong class="font-medium text-black-soft">9 năm kinh nghiệm</strong> trong lĩnh vực Digital Marketing, với nền tảng về Performance Marketing, Lead Generation, Content, CRM và quản lý các kênh Digital.
+                    </p>
+                    <p>
+                        Kinh nghiệm của tôi trải dài qua <strong class="font-medium text-black-soft">Real Estate, F&B và Hospitality</strong>, từ phát triển thương hiệu, xây dựng hệ thống online đến triển khai các chiến dịch tìm kiếm khách hàng và hỗ trợ tăng trưởng doanh thu.
+                    </p>
+                    <p>
+                        Hiện tôi định hướng mở rộng kinh nghiệm sang các ngành hàng và mô hình kinh doanh mới, dựa trên nền tảng Digital Marketing đã tích lũy và tiếp tục phát triển thêm tư duy dữ liệu, performance và growth.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Right Column: Core Expertise -->
+            <div class="lg:col-span-5 reveal delay-100">
+                <h3 class="text-xs tracking-[0.2em] uppercase font-semibold text-gray-500 mb-8 pb-4 border-b border-gray-divider">Core Expertise</h3>
+                <ul class="space-y-5">
+                    <!-- Iterating through expertise list -->
+                    <li class="flex items-center text-black-soft">
+                        <svg class="w-5 h-5 text-gold-muted mr-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="font-medium">Digital Strategy & Planning</span>
+                    </li>
+                    <li class="flex items-center text-black-soft">
+                        <svg class="w-5 h-5 text-gold-muted mr-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="font-medium">Performance Marketing</span>
+                    </li>
+                    <li class="flex items-center text-black-soft">
+                        <svg class="w-5 h-5 text-gold-muted mr-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="font-medium">Lead Generation & CRM</span>
+                    </li>
+                    <li class="flex items-center text-black-soft">
+                        <svg class="w-5 h-5 text-gold-muted mr-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="font-medium">Social Media Management</span>
+                    </li>
+                    <li class="flex items-center text-black-soft">
+                        <svg class="w-5 h-5 text-gold-muted mr-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="font-medium">Content Marketing</span>
+                    </li>
+                    <li class="flex items-center text-black-soft">
+                        <svg class="w-5 h-5 text-gold-muted mr-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="font-medium">Website Management</span>
+                    </li>
+                    <li class="flex items-center text-black-soft">
+                        <svg class="w-5 h-5 text-gold-muted mr-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="font-medium">Marketing Data Analysis & Reporting</span>
+                    </li>
+                    <li class="flex items-center text-black-soft">
+                        <svg class="w-5 h-5 text-gold-muted mr-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="font-medium">Agency & KOL Management</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="py-24 md:py-32 px-6 lg:px-12 border-t border-gray-divider bg-[#FAFAFA]">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-xs tracking-[0.2em] uppercase font-semibold text-gray-500 mb-16 text-center reveal">Work Experience</h2>
+            
+            <!-- Timeline container -->
+            <div class="relative border-l border-gray-divider ml-4 md:ml-0">
+                
+                <!-- Timeline Item 1 -->
+                <div class="mb-14 ml-8 md:ml-12 relative reveal">
+                    <span class="absolute w-2.5 h-2.5 bg-black-soft rounded-full -left-[37px] md:-left-[53px] top-1.5 ring-4 ring-[#FAFAFA]"></span>
+                    <div class="flex flex-col md:flex-row md:items-baseline mb-2">
+                        <h3 class="font-serif text-xl md:text-2xl font-bold text-black-soft">BENTHANH HOUSE</h3>
+                        <span class="text-sm font-medium text-gold-muted md:ml-4 mt-1 md:mt-0">2023 – 2026</span>
+                    </div>
+                    <h4 class="text-base font-semibold text-gray-800 mb-3">Marketing Leader <span class="font-normal text-gray-500 italic">(F&B · Hospitality)</span></h4>
+                    <p class="text-gray-dark font-light leading-relaxed">Phụ trách hoạt động Marketing cho Gucafé và Alàla Stay, tập trung phát triển thương hiệu, hệ thống Digital và các nguồn khách hàng online.</p>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="mb-14 ml-8 md:ml-12 relative reveal">
+                    <span class="absolute w-2.5 h-2.5 bg-gray-300 rounded-full -left-[37px] md:-left-[53px] top-1.5 ring-4 ring-[#FAFAFA]"></span>
+                    <div class="flex flex-col md:flex-row md:items-baseline mb-2">
+                        <h3 class="font-serif text-xl md:text-2xl font-bold text-black-soft">THĂNG LONG REAL GROUP</h3>
+                        <span class="text-sm font-medium text-gold-muted md:ml-4 mt-1 md:mt-0">2022 – 2023</span>
+                    </div>
+                    <h4 class="text-base font-semibold text-gray-800 mb-2">Digital Marketing Specialist <span class="font-normal text-gray-500 italic">(Real Estate)</span></h4>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="mb-14 ml-8 md:ml-12 relative reveal">
+                    <span class="absolute w-2.5 h-2.5 bg-gray-300 rounded-full -left-[37px] md:-left-[53px] top-1.5 ring-4 ring-[#FAFAFA]"></span>
+                    <div class="flex flex-col md:flex-row md:items-baseline mb-2">
+                        <h3 class="font-serif text-xl md:text-2xl font-bold text-black-soft">HƯNG VƯỢNG HOLDINGS</h3>
+                        <span class="text-sm font-medium text-gold-muted md:ml-4 mt-1 md:mt-0">2019 – 2022</span>
+                    </div>
+                    <h4 class="text-base font-semibold text-gray-800 mb-2">Digital Marketing Leader <span class="font-normal text-gray-500 italic">(Real Estate)</span></h4>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="ml-8 md:ml-12 relative reveal">
+                    <span class="absolute w-2.5 h-2.5 bg-gray-300 rounded-full -left-[37px] md:-left-[53px] top-1.5 ring-4 ring-[#FAFAFA]"></span>
+                    <div class="flex flex-col md:flex-row md:items-baseline mb-2">
+                        <h3 class="font-serif text-xl md:text-2xl font-bold text-black-soft">ĐỊA ỐC NHÀ ĐẠI PHÁT</h3>
+                        <span class="text-sm font-medium text-gold-muted md:ml-4 mt-1 md:mt-0">2015 – 2019</span>
+                    </div>
+                    <h4 class="text-base font-semibold text-gray-800 mb-2">Digital Marketing Executive &rarr; Leader <span class="font-normal text-gray-500 italic">(Real Estate)</span></h4>
+                </div>
+            </div>
+            
+            <!-- Bottom Text with lines -->
+            <div class="mt-20 flex items-center reveal">
+                <div class="flex-grow border-t border-gray-divider"></div>
+                <span class="mx-6 text-xs tracking-[0.2em] uppercase font-medium text-gray-400">Brand · Growth · Performance · Lead Gen</span>
+                <div class="flex-grow border-t border-gray-divider"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 lg:px-12 border-t border-gray-divider">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+            
+            <!-- Skills -->
+            <div class="reveal">
+                <h3 class="text-xs tracking-[0.2em] uppercase font-semibold text-gray-500 mb-8">Digital Marketing Skills</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-5 py-2 bg-gray-accent border border-gray-200/50 text-black-soft rounded-full text-sm font-medium">Digital Strategy & Planning</span>
+                    <span class="px-5 py-2 bg-gray-accent border border-gray-200/50 text-black-soft rounded-full text-sm font-medium">Performance Marketing</span>
+                    <span class="px-5 py-2 bg-gray-accent border border-gray-200/50 text-black-soft rounded-full text-sm font-medium">Social Media Management</span>
+                    <span class="px-5 py-2 bg-gray-accent border border-gray-200/50 text-black-soft rounded-full text-sm font-medium">Content Marketing</span>
+                    <span class="px-5 py-2 bg-gray-accent border border-gray-200/50 text-black-soft rounded-full text-sm font-medium">Lead Generation & CRM</span>
+                    <span class="px-5 py-2 bg-gray-accent border border-gray-200/50 text-black-soft rounded-full text-sm font-medium">Email Marketing</span>
+                    <span class="px-5 py-2 bg-gray-accent border border-gray-200/50 text-black-soft rounded-full text-sm font-medium">Website Management</span>
+                    <span class="px-5 py-2 bg-gray-accent border border-gray-200/50 text-black-soft rounded-full text-sm font-medium">Data Analysis & Reporting</span>
+                    <span class="px-5 py-2 bg-gray-accent border border-gray-200/50 text-black-soft rounded-full text-sm font-medium">Agency & KOL Management</span>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="reveal delay-100">
+                <h3 class="text-xs tracking-[0.2em] uppercase font-semibold text-gray-500 mb-8">Platforms & Tools</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-5 py-2 bg-white border border-gray-300 text-gray-dark rounded-full text-sm font-medium">Meta Ads</span>
+                    <span class="px-5 py-2 bg-white border border-gray-300 text-gray-dark rounded-full text-sm font-medium">Google Ads</span>
+                    <span class="px-5 py-2 bg-white border border-gray-300 text-gray-dark rounded-full text-sm font-medium">TikTok Ads</span>
+                    <span class="px-5 py-2 bg-white border border-gray-300 text-gray-dark rounded-full text-sm font-medium">Google Sheets</span>
+                    <span class="px-5 py-2 bg-white border border-gray-300 text-gray-dark rounded-full text-sm font-medium">Microsoft Excel</span>
+                    <span class="px-5 py-2 bg-white border border-gray-300 text-gray-dark rounded-full text-sm font-medium">Getfly CRM</span>
+                    <span class="px-5 py-2 bg-white border border-gray-300 text-gray-dark rounded-full text-sm font-medium">Infusionsoft CRM</span>
+                    <span class="px-5 py-2 bg-white border border-gray-300 text-gray-dark rounded-full text-sm font-medium">Canva</span>
+                    <span class="px-5 py-2 bg-white border border-gray-300 text-gray-dark rounded-full text-sm font-medium">CapCut</span>
+                    <span class="px-5 py-2 bg-white border border-gray-300 text-gray-dark rounded-full text-sm font-medium">Microsoft Office</span>
+                    <span class="px-5 py-2 bg-white border border-gray-300 text-gray-dark rounded-full text-sm font-medium">Looker Studio</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="cases" class="py-24 md:py-32 px-6 lg:px-12 border-t border-gray-divider">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="mb-16 text-center reveal">
+                <span class="text-xs tracking-[0.2em] uppercase font-semibold text-gold-muted mb-3 block">Case Study 01</span>
+                <h2 class="font-serif text-4xl md:text-6xl font-bold text-black-soft mb-4">GUCafé</h2>
+                <p class="font-script text-2xl md:text-3xl text-gray-500">Brand Growth & Online Sales</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-16">
+                <!-- Column 1: Context -->
+                <div class="reveal">
+                    <div class="mb-10">
+                        <h3 class="text-xs tracking-[0.2em] uppercase font-semibold text-gray-400 mb-4 border-b border-gray-divider pb-2 inline-block">The Challenge</h3>
+                        <p class="text-gray-dark font-light leading-relaxed">Bắt đầu 2023, hệ thống online hạn chế: Facebook Page chỉ có ~600 followers, tương tác thấp. Chưa có hoạt động Food Delivery. Chưa khai thác kênh TikTok và E-commerce.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xs tracking-[0.2em] uppercase font-semibold text-gray-400 mb-4 border-b border-gray-divider pb-2 inline-block">My Role</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-sm text-black-soft bg-gray-50 px-3 py-1 border border-gray-200">Marketing Planning</span>
+                            <span class="text-sm text-black-soft bg-gray-50 px-3 py-1 border border-gray-200">Social Media</span>
+                            <span class="text-sm text-black-soft bg-gray-50 px-3 py-1 border border-gray-200">Content</span>
+                            <span class="text-sm text-black-soft bg-gray-50 px-3 py-1 border border-gray-200">Digital Campaign</span>
+                            <span class="text-sm text-black-soft bg-gray-50 px-3 py-1 border border-gray-200">Food Delivery</span>
+                            <span class="text-sm text-black-soft bg-gray-50 px-3 py-1 border border-gray-200">E-commerce</span>
+                            <span class="text-sm text-black-soft bg-gray-50 px-3 py-1 border border-gray-200">Agency & KOL Coordination</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Results -->
+                <div class="space-y-10 reveal delay-100">
+                    <div>
+                        <h4 class="text-xs tracking-[0.2em] uppercase font-medium text-gray-400 mb-2">Brand Growth</h4>
+                        <div class="flex items-baseline gap-3 mb-2">
+                            <span class="font-serif text-5xl font-bold text-black-soft">10X</span>
+                            <span class="text-lg text-gold-muted font-serif italic">growth</span>
+                        </div>
+                        <p class="text-sm text-gray-dark font-light leading-relaxed">Từ 600 lên <strong>6,000+</strong> Facebook Followers. Đạt <strong>2,000+</strong> Average Reach và <strong>100+</strong> Average Interactions.</p>
+                    </div>
+                    
+                    <div class="w-full h-[1px] bg-gray-divider"></div>
+
+                    <div>
+                        <h4 class="text-xs tracking-[0.2em] uppercase font-medium text-gray-400 mb-2">Food Delivery</h4>
+                        <div class="flex items-baseline gap-3 mb-2">
+                            <span class="font-serif text-5xl font-bold text-black-soft">4</span>
+                            <span class="text-lg text-gold-muted font-serif italic">platforms</span>
+                        </div>
+                        <p class="text-sm text-gray-dark font-light leading-relaxed">Triển khai từ số 0 lên GrabFood, ShopeeFood, Be, Green SM. Doanh thu ~30 triệu/tháng (chiếm <strong>~30%</strong> tổng doanh thu).</p>
+                    </div>
+
+                    <div class="w-full h-[1px] bg-gray-divider"></div>
+
+                    <div>
+                        <h4 class="text-xs tracking-[0.2em] uppercase font-medium text-gray-400 mb-2">E-Commerce</h4>
+                        <p class="text-sm text-gray-dark font-light leading-relaxed">Mở rộng kênh bán hàng trên TikTok Shop và Shopee, phát triển các nhóm sản phẩm như ly giữ nhiệt, cà phê và bánh Trung Thu, (Đóng góp <strong>~10%</strong> Revenue Contribution).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outcome & Images -->
+            <div class="reveal">
+                <p class="font-serif italic text-xl md:text-2xl text-center text-black-soft max-w-4xl mx-auto mb-12">
+                    "Từ một thương hiệu hiện diện online hạn chế, phát triển thành hệ thống Digital đa kênh tạo ra chuyển đổi thực tế."
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- Image 1 -->
+                    <div class="aspect-square bg-gray-50 border border-gray-200 relative group cursor-zoom-in overflow-hidden" onclick="openLightbox(this)">
+                        <!-- =================== THAY ẢNH FACEBOOK PAGE Ở ĐÂY =================== -->
+                        <!-- Sửa đường link trong src="..." (ảnh nhỏ) và data-full="..." (ảnh phóng to) -->
+                        <img src="gufb.jpg" data-full="gufb.jpg" alt="Facebook Page" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-white/95 backdrop-blur-sm px-4 py-2 font-serif italic text-sm text-black-soft shadow-sm rounded-sm">Facebook Page</span>
+                        </div>
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="aspect-square bg-gray-50 border border-gray-200 relative group cursor-zoom-in overflow-hidden" onclick="openLightbox(this)">
+                        <!-- =================== THAY ẢNH GRABFOOD Ở ĐÂY =================== -->
+                        <img src="grab.jpg" data-full="grab.jpg" alt="GrabFood" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-white/95 backdrop-blur-sm px-4 py-2 font-serif italic text-sm text-black-soft shadow-sm rounded-sm">GrabFood</span>
+                        </div>
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="aspect-square bg-gray-50 border border-gray-200 relative group cursor-zoom-in overflow-hidden" onclick="openLightbox(this)">
+                        <!-- =================== THAY ẢNH SHOPEE Ở ĐÂY =================== -->
+                        <img src="shopee.jpg" data-full="shopee.jpg" alt="Shopee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-white/95 backdrop-blur-sm px-4 py-2 font-serif italic text-sm text-black-soft shadow-sm rounded-sm">Shopee</span>
+                        </div>
+                    </div>
+                    <!-- Image 4 -->
+                    <div class="aspect-square bg-gray-50 border border-gray-200 relative group cursor-zoom-in overflow-hidden" onclick="openLightbox(this)">
+                        <!-- =================== THAY ẢNH TIKTOK Ở ĐÂY =================== -->
+                        <img src="gutiktok.jpg" data-full="gutiktok.jpg" alt="TikTok" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-white/95 backdrop-blur-sm px-4 py-2 font-serif italic text-sm text-black-soft shadow-sm rounded-sm">TikTok</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 px-6 lg:px-12 border-t border-gray-divider bg-[#FAFAFA]">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="mb-16 text-center reveal">
+                <span class="text-xs tracking-[0.2em] uppercase font-semibold text-gold-muted mb-3 block">Case Study 02</span>
+                <h2 class="font-serif text-4xl md:text-6xl font-bold text-black-soft mb-4">ALÀLA STAY</h2>
+                <p class="font-script text-2xl md:text-3xl text-gray-500">Brand Launch & Online Booking Growth</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-16">
+                <!-- Column 1: Context -->
+                <div class="reveal">
+                    <div class="mb-10">
+                        <h3 class="text-xs tracking-[0.2em] uppercase font-semibold text-gray-400 mb-4 border-b border-gray-divider pb-2 inline-block">The Challenge</h3>
+                        <p class="text-gray-dark font-light leading-relaxed">Khởi tạo thương hiệu từ số 0, 3 villa tại NovaWorld Phan Thiết. Mục tiêu cốt lõi: Xây dựng nhận diện, tạo nguồn khách ổn định từ Social, OTA, TikTok và Google Maps.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xs tracking-[0.2em] uppercase font-semibold text-gray-400 mb-4 border-b border-gray-divider pb-2 inline-block">My Role</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-sm text-black-soft bg-white border border-gray-200 px-3 py-1">Brand & Digital Strategy</span>
+                            <span class="text-sm text-black-soft bg-white border border-gray-200 px-3 py-1">Social Media</span>
+                            <span class="text-sm text-black-soft bg-white border border-gray-200 px-3 py-1">OTA Setup & Management</span>
+                            <span class="text-sm text-black-soft bg-white border border-gray-200 px-3 py-1">Content</span>
+                            <span class="text-sm text-black-soft bg-white border border-gray-200 px-3 py-1">TikTok/KOL</span>
+                            <span class="text-sm text-black-soft bg-white border border-gray-200 px-3 py-1">Google Maps/Local SEO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Results -->
+                <div class="space-y-8 reveal delay-100">
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-xs tracking-[0.2em] uppercase font-medium text-gray-400 mb-2">OTA Ecosystem</h4>
+                            <span class="block font-serif text-4xl font-bold text-black-soft mb-2">6</span>
+                            <p class="text-sm text-gray-dark font-light">Platforms (Agoda, Booking.com, Trip.com, Expedia, Traveloka, Airbnb). Đóng góp <strong>~50%</strong> Bookings.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs tracking-[0.2em] uppercase font-medium text-gray-400 mb-2">Social Media</h4>
+                            <span class="block font-serif text-4xl font-bold text-black-soft mb-2">20%</span>
+                            <p class="text-sm text-gray-dark font-light">Bookings đóng góp. ~3,000 Reach, ~100 Engagements/post.</p>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-[1px] bg-gray-divider"></div>
+
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-xs tracking-[0.2em] uppercase font-medium text-gray-400 mb-2">TikTok</h4>
+                            <span class="block font-serif text-3xl font-bold text-black-soft mb-2">10K+</span>
+                            <p class="text-sm text-gray-dark font-light">Views/Video. 2,000+ Followers.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs tracking-[0.2em] uppercase font-medium text-gray-400 mb-2">Google Maps</h4>
+                            <span class="block font-serif text-3xl font-bold text-black-soft mb-2">2,000</span>
+                            <p class="text-sm text-gray-dark font-light">Map Visits/Month (Local SEO).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outcome & Images -->
+            <div class="reveal">
+                <p class="font-serif italic text-xl md:text-2xl text-center text-black-soft max-w-4xl mx-auto mb-12">
+                    "Xây dựng từ đầu hệ thống Digital Distribution vững chắc, giúp lấp đầy công suất phòng và định vị thương hiệu."
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- Image 1 -->
+                    <div class="aspect-square bg-white border border-gray-200 relative group cursor-zoom-in overflow-hidden" onclick="openLightbox(this)">
+                        <!-- =================== THAY ẢNH SOCIAL ALÀLA Ở ĐÂY =================== -->
+                        <img src="alalafb.jpg" data-full="alalafb.jpg" alt="Facebook / Social" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-white/95 backdrop-blur-sm px-4 py-2 font-serif italic text-sm text-black-soft shadow-sm rounded-sm">Facebook / Social</span>
+                        </div>
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="aspect-square bg-white border border-gray-200 relative group cursor-zoom-in overflow-hidden" onclick="openLightbox(this)">
+                        <!-- =================== THAY ẢNH TIKTOK ALÀLA Ở ĐÂY =================== -->
+                        <img src="alalatiktok.jpg" data-full="alalatiktok.jpg" alt="TikTok Channel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-white/95 backdrop-blur-sm px-4 py-2 font-serif italic text-sm text-black-soft shadow-sm rounded-sm">TikTok Channel</span>
+                        </div>
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="aspect-square bg-white border border-gray-200 relative group cursor-zoom-in overflow-hidden" onclick="openLightbox(this)">
+                        <!-- =================== THAY ẢNH GOOGLE MAPS ALÀLA Ở ĐÂY =================== -->
+                        <img src="map.png" data-full="map.png" alt="Google Maps" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-white/95 backdrop-blur-sm px-4 py-2 font-serif italic text-sm text-black-soft shadow-sm rounded-sm">Google Maps</span>
+                        </div>
+                    </div>
+                    <!-- Image 4 -->
+                    <div class="aspect-square bg-white border border-gray-200 relative group cursor-zoom-in overflow-hidden" onclick="openLightbox(this)">
+                        <!-- =================== THAY ẢNH OTA ALÀLA Ở ĐÂY =================== -->
+                        <img src="agoda.jpg" data-full="agoda.jpg" alt="OTA (Booking/Airbnb)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="bg-white/95 backdrop-blur-sm px-4 py-2 font-serif italic text-sm text-black-soft shadow-sm rounded-sm">OTA (Booking/Airbnb)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 px-6 lg:px-12 border-t border-gray-divider bg-white">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="mb-20 text-center max-w-3xl mx-auto reveal">
+                <span class="text-xs tracking-[0.2em] uppercase font-semibold text-gold-muted mb-3 block">Case Study 03</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-black-soft mb-6">Real Estate Performance Marketing</h2>
+                <p class="font-serif text-lg text-gray-dark italic leading-relaxed">
+                    "Nhiều năm triển khai Digital Marketing cho các dự án bất động sản, tập trung vào Lead Generation, Meta Ads, Remarketing, CRM và phối hợp Sales."
+                </p>
+                <div class="mt-8 flex justify-center"><div class="w-12 h-[1px] bg-black-soft"></div></div>
+            </div>
+
+            <!-- CSS Grid 3x2 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+                
+                <!-- Card 1 -->
+                <div class="group reveal">
+                    <div class="aspect-square bg-gray-50 border border-gray-200 mb-5 overflow-hidden">
+                        <!-- =================== THAY ẢNH DỰ ÁN 1 Ở ĐÂY =================== -->
+                        <!-- Sửa src="..." thành link ảnh dự án của bạn -->
+                        <img src="emerald.png" alt="THE EMERALD 68" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-black-soft mb-2 uppercase tracking-wide">THE EMERALD 68 <br> <span class="font-normal text-gray-500 text-sm">BÌNH DƯƠNG</span></h3>
+                    <p class="text-sm font-medium text-gold-muted tracking-widest uppercase">31M Budget <span class="text-gray-300 mx-2">|</span> 240K CPL</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group reveal delay-100">
+                    <div class="aspect-square bg-gray-50 border border-gray-200 mb-5 overflow-hidden">
+                        <!-- =================== THAY ẢNH DỰ ÁN 2 Ở ĐÂY =================== -->
+                        <img src="citigrand.png" alt="CITIGRAND" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-black-soft mb-2 uppercase tracking-wide">CITIGRAND <br> <span class="font-normal text-gray-500 text-sm">CÁT LÁI</span></h3>
+                    <p class="text-sm font-medium text-gold-muted tracking-widest uppercase">15M Budget <span class="text-gray-300 mx-2">|</span> 270K CPL</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group reveal delay-200">
+                    <div class="aspect-square bg-gray-50 border border-gray-200 mb-5 overflow-hidden">
+                        <!-- =================== THAY ẢNH DỰ ÁN 3 Ở ĐÂY =================== -->
+                        <img src="akari.jpg" alt="AKARI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-black-soft mb-2 uppercase tracking-wide">AKARI <br> <span class="font-normal text-gray-500 text-sm">VÕ VĂN KIỆT</span></h3>
+                    <p class="text-sm font-medium text-gold-muted tracking-widest uppercase">50M Budget <span class="text-gray-300 mx-2">|</span> 350K CPL</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group reveal">
+                    <div class="aspect-square bg-gray-50 border border-gray-200 mb-5 overflow-hidden">
+                        <!-- =================== THAY ẢNH DỰ ÁN 4 Ở ĐÂY =================== -->
+                        <img src="celadon.png" alt="CELADON CITY" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-black-soft mb-2 uppercase tracking-wide">CELADON CITY <br> <span class="font-normal text-gray-500 text-sm">TÂN PHÚ</span></h3>
+                    <p class="text-sm font-medium text-gold-muted tracking-widest uppercase">50M Budget <span class="text-gray-300 mx-2">|</span> 500K CPL</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="group reveal delay-100">
+                    <div class="aspect-square bg-gray-50 border border-gray-200 mb-5 overflow-hidden">
+                        <!-- =================== THAY ẢNH DỰ ÁN 5 Ở ĐÂY =================== -->
+                        <img src="skyzen.jpg" alt="SKY ZEN" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-black-soft mb-2 uppercase tracking-wide">SKY ZEN – PICITY <br> <span class="font-normal text-gray-500 text-sm">DĨ AN</span></h3>
+                    <p class="text-sm font-medium text-gold-muted tracking-widest uppercase">20M Budget <span class="text-gray-300 mx-2">|</span> 250K CPL</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="group reveal delay-200">
+                    <div class="aspect-square bg-gray-50 border border-gray-200 mb-5 overflow-hidden">
+                        <!-- =================== THAY ẢNH DỰ ÁN 6 Ở ĐÂY =================== -->
+                        <img src="angsana.png" alt="ANGSANA" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-black-soft mb-2 uppercase tracking-wide">ANGSANA <br> <span class="font-normal text-gray-500 text-sm">VÕ VĂN KIỆT</span></h3>
+                    <p class="text-sm font-medium text-gold-muted tracking-widest uppercase">30M Budget <span class="text-gray-300 mx-2">|</span> 350K CPL</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-accent border-t border-gray-divider py-32 px-6 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10 reveal">
+            
+            <div class="mb-12">
+                <h3 class="font-serif text-2xl font-bold text-black-soft mb-2">TRẦN MỸ THỊNH</h3>
+                <p class="text-xs tracking-[0.2em] uppercase font-medium text-gray-500 mb-8">Digital Marketing Specialist</p>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-black-soft font-medium text-sm md:text-base">
+                    <a href="tel:0937833726" class="hover:text-gold-muted transition-colors border-b border-transparent hover:border-gold-muted pb-0.5">093 78 33 726</a>
+                    <span class="hidden md:block text-gray-300">|</span>
+                    <a href="mailto:tranmythinh@gmail.com" class="hover:text-gold-muted transition-colors border-b border-transparent hover:border-gold-muted pb-0.5">tranmythinh@gmail.com</a>
+                    <span class="hidden md:block text-gray-300">|</span>
+                    <span>Thủ Đức, TP. HCM</span>
+                </div>
+            </div>
+            
+            <div class="pt-10 border-t border-gray-300/50 flex justify-center mt-4">
+                <!-- Script Font Accent -->
+                <p class="font-script text-4xl md:text-5xl text-gold-muted transform rotate-[-5deg]">
+                    Thank you!
+                </p>
+            </div>
+            
+        </div>
+        
+        <div class="absolute bottom-6 w-full text-center text-xs tracking-widest uppercase text-gray-400 left-0">
+            &copy; 2024 Tran My Thinh. Editorial Design.
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300 backdrop-blur-sm">
+        <button id="lightbox-close" class="absolute top-6 right-6 md:top-10 md:right-10 text-white/70 hover:text-white text-5xl font-light transition-colors cursor-pointer z-[101]">&times;</button>
+        <img id="lightbox-img" src="" alt="Zoomed View" class="max-w-[95vw] max-h-[90vh] object-contain scale-95 transition-transform duration-300 shadow-2xl">
+        <p id="lightbox-caption" class="text-white/80 font-serif italic mt-6 text-lg hidden"></p>
+    </div>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-sm', 'py-4');
+                navbar.classList.remove('py-5');
+            } else {
+                navbar.classList.remove('shadow-sm', 'py-4');
+                navbar.classList.add('py-5');
+            }
+        });
+
+        // Intersection Observer for Reveal Animations (Fade-in on scroll)
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const revealOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: unobserve if you only want it to animate once
+                        // observer.unobserve(entry.target); 
+                    }
+                });
+            }, revealOptions);
+
+            reveals.forEach(reveal => {
+                revealOnScroll.observe(reveal);
+            });
+        });
+
+        // Lightbox functionality
+        function openLightbox(element) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const imgEl = element.querySelector('img');
+            const captionTextEl = element.querySelector('span');
+            
+            // Lấy link ảnh độ phân giải cao (nếu có), nếu không dùng ảnh preview
+            lightboxImg.src = imgEl.getAttribute('data-full') || imgEl.src;
+            
+            // Set dòng caption nếu có
+            if(captionTextEl && captionTextEl.innerText) {
+                lightboxCaption.innerText = captionTextEl.innerText;
+                lightboxCaption.classList.remove('hidden');
+            } else {
+                lightboxCaption.classList.add('hidden');
+            }
+            
+            // Hiển thị Lightbox
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            
+            // Trigger animation fade-in & zoom-in
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                lightboxImg.classList.remove('scale-95');
+                lightboxImg.classList.add('scale-100');
+            }, 10);
+            
+            // Khoá cuộn trang nền
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            // Hiệu ứng Fade-out & Zoom-out
+            lightbox.classList.add('opacity-0');
+            lightboxImg.classList.remove('scale-100');
+            lightboxImg.classList.add('scale-95');
+            
+            // Ẩn hoàn toàn sau khi xong animation
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+                // Phục hồi cuộn trang
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // Lắng nghe các sự kiện cho Lightbox
+        document.addEventListener('DOMContentLoaded', () => {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxClose = document.getElementById('lightbox-close');
+            
+            if (lightbox) {
+                // Đóng khi ấn nút (X)
+                lightboxClose.addEventListener('click', closeLightbox);
+                
+                // Đóng khi click ra vùng đen bên ngoài ảnh
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox || e.target.tagName !== 'IMG') {
+                        closeLightbox();
+                    }
+                });
+
+                // Đóng khi ấn nút ESC trên bàn phím
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                        closeLightbox();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
